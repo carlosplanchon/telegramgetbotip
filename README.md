@@ -30,6 +30,8 @@ optional arguments:
   -d DELTA, --delta DELTA
                         Time between queries.
 ```
+The Bot Token file must contain the bot ID in plain text.
+The ids's file must contain an ID in each line of the document (separated by "\n")
 
 From the interpreter:
 
