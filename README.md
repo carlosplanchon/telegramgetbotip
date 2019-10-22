@@ -33,6 +33,9 @@ optional arguments:
 The Bot Token file must contain the bot ID in plain text.
 The ids's file must contain an ID in each line of the document (separated by "\n")
 
+You can get your Telegram ID from @userinfobot
+You can register your Telegram Bot from @BotFather
+
 From the interpreter:
 
 ```

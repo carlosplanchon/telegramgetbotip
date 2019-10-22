@@ -14,7 +14,7 @@ setup(
             "telegramgetbotip = telegramgetbotip.__main__:main"
         ]
     },
-    version="0.1.1",
+    version="0.1.2",
     license="GPL3",
     description="Python3 telegram bot to retrieve public IP "
     "of the Telegram bot's host machine.",
@@ -24,7 +24,7 @@ setup(
     author_email="bubbledoloresuruguay2@gmail.com",
     url="https://github.com/carlosplanchon/telegramgetbotip",
     download_url="https://github.com/carlosplanchon/"
-        "telegramgetbotip/archive/v0.1.1.tar.gz",
+        "telegramgetbotip/archive/v0.1.2.tar.gz",
     keywords=["telegram", "bot", "ip", "networking"],
     install_requires=[
         "telepot"

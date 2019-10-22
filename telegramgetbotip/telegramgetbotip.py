@@ -49,7 +49,8 @@ class TelegramGetBotIp:
                         time_since_last_query = time() - last_query
                         needs_to_wait = self.time_between_queries\
                             - time_since_last_query
-                        resp = f"Wait {int(needs_to_wait)} to query again."
+                        resp = f"Wait {int(needs_to_wait)} second(s) "\
+                            "to query again."
 
         if query_enabled:
             try:
