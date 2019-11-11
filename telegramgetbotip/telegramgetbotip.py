@@ -86,7 +86,7 @@ class TelegramGetBotIp:
         """
         self.bot_token = Path(bot_token_file).read_text()
         self.allowed_telegram_ids = [int(i) for i in Path(
-            allowed_telegram_ids_file).read_text().split("\n")]
+            allowed_telegram_ids_file).read_text().split("\n") if i.isnumeric()]
 
         self.time_between_queries = time_between_queries
         self.verbose = verbose
