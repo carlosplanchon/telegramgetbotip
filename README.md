@@ -30,8 +30,15 @@ optional arguments:
   -d DELTA, --delta DELTA
                         Time between queries.
 ```
-The Bot Token file must contain the bot ID in plain text.
-The ids's file must contain an ID in each line of the document (separated by "\n")
+The Bot Token file must contain the bot ID in JSON format.
+{
+	"token": "token_string" (str)
+}
+
+The ids's file must contain the IDs in JSON format.
+{
+	"name": id (int)
+}
 
 You can get your Telegram ID from @userinfobot
 You can register your Telegram Bot from @BotFather

@@ -3,7 +3,6 @@
 from telegramgetbotip.telegramgetbotip import TelegramGetBotIp
 
 from argparse import ArgumentParser
-from pathlib import Path
 
 
 def main():
@@ -44,8 +43,8 @@ def main():
     bot = TelegramGetBotIp()
     if args.tokenfile and args.idsfile:
         bot.start_bot(
-            bot_token_file=Path(args.tokenfile),
-            allowed_telegram_ids_file=Path(args.idsfile),
+            bot_token_file=args.tokenfile,
+            allowed_telegram_ids_file=args.idsfile,
             time_between_queries=args.delta,
             verbose=args.verbose
             )

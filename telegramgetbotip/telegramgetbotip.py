@@ -5,7 +5,7 @@ from telepot.loop import MessageLoop
 from requests import get
 from telepot import Bot
 
-from pathlib import Path
+from json import load
 from pprint import pprint
 from time import sleep, time
 
@@ -69,8 +69,8 @@ class TelegramGetBotIp:
 
     def start_bot(
         self,
-        bot_token_file: Path,
-        allowed_telegram_ids_file: Path,
+        bot_token_file,
+        allowed_telegram_ids_file,
         time_between_queries: int = -1,
         verbose: bool = False
             ):
@@ -84,9 +84,10 @@ class TelegramGetBotIp:
         :param verbose: bool: Verbosity. (Default value = False)
 
         """
-        self.bot_token = Path(bot_token_file).read_text()
-        self.allowed_telegram_ids = [int(i) for i in Path(
-            allowed_telegram_ids_file).read_text().split("\n") if i.isnumeric()]
+        with open(bot_token_file, "r") as f:
+            self.bot_token = list(load(f).values())[0]
+        with open(allowed_telegram_ids_file, "r") as f:
+            self.allowed_telegram_ids = load(f).values()
 
         self.time_between_queries = time_between_queries
         self.verbose = verbose
