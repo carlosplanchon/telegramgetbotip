@@ -1,4 +1,6 @@
 
+Disclaimer: This is a fork of https://github.com/carlosplanchon/telegramgetbotip! I only added Docker support and extended the documentation. I do not intend to change the software itself (I'm not a Python programmer anyway...).
+
 # telegramgetbotip
 *Python3 telegram bot to retrieve public IP of the Telegram bot's host machine.*
 
