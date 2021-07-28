@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.8
 COPY . .
 RUN python3.8 -m pip install requests
 RUN python3.8 -m pip install --user -U telegramgetbotip
